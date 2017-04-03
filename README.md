@@ -6,6 +6,18 @@ Receipt interpreter
 
 ReceiptInterpreter was created by, and is maintained by [Oliver Kaufmann](https://github.com/). Feel free to check out the [change log](CHANGELOG.md), [releases](https://github.com/ptondereau/laravel-packme/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
+## Perquisites
+
+Google's Tesseract need's to be installed before you can use this package.
+Consult official docs here: https://github.com/tesseract-ocr/tesseract.
+
+Ensure you have installed the language your receipts are written in.
+
+For German install it ex. on Ubuntu like the following:
+```commandline
+sudo apt-get install tesseract-ocr-deu
+```
+
 ## Installation
 
 Either [PHP](https://php.net) 5.5+ or [HHVM](http://hhvm.com) 3.6+ are required.

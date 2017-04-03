@@ -73,9 +73,9 @@ class ReceiptInterpreterServiceProvider extends ServiceProvider
     protected function registerReceipt()
     {
         $this->app->singleton('receiptinterpreter.receipt', function (Container $app) {
-            return new Receipt($app['config']);
+            return new ReceiptInterpreter($app['config']);
         });
-        $this->app->alias('receiptinterpreter.receipt', Receipt::class);
+        $this->app->alias('receiptinterpreter.receipt', ReceiptInterpreter::class);
     }
 
     /**

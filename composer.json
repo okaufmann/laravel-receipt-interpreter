@@ -15,7 +15,9 @@
         "illuminate/contracts": "5.4.*",
         "illuminate/support": "5.4.*",
         "thiagoalessio/tesseract_ocr": "1.0.0-RC",
-        "spatie/image": "^1.1"
+        "spatie/image": "^1.1",
+        "spatie/regex": "^1.1",
+        "federicoginosa/textcleaner": "^1.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.4",

@@ -1,57 +1,46 @@
 <?php
 /*
- * This file is part of YourPackage.
+ * laravel-receipt-interpreter
  *
- * (c) Oliver Kaufmann
+ * This File belongs to to Project laravel-receipt-interpreter
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * @author Oliver Kaufmann <okaufmann91@gmail.com>
+ * @version 1.0
  */
 
 namespace Okaufmann\ReceiptInterpreter;
 
-use Illuminate\Contracts\Config\Repository;
 
-/**
- * This is the Dummy class.
- *
- * @author Oliver Kaufmann
- */
+use Spatie\Regex\Regex;
+
 class Receipt
 {
-    /**
-     * Foo.
-     *
-     * @var string
-     */
-    protected $foo;
+    private $text;
 
-    /**
-     * Config repository.
-     *
-     * @var Repository
-     */
-    protected $config;
+    private $priceRegex = '/(Total|Summe).*([0-9]{0,4}[,\.][0-9]{0,2})/';
 
-    /**
-     * Create a new dummy instance.
-     *
-     * @param Repository $config
-     *
-     * @return void
-     */
-    public function __construct(Repository $config)
+    private function __construct($text)
     {
-        $this->foo = array_get($config['receiptinterpreter'], 'foo');
+        $this->text = $text;
     }
 
     /**
-     * Return foo.
+     * Create new instance
      *
-     * @return string
+     * @param $text
+     * @return Receipt
      */
-    public function getFoo()
+    public static function create($text)
     {
-        return $this->foo;
+        $instance = new self($text);
+
+        return $instance;
+    }
+
+    public function getPrice()
+    {
+        $priceMatch = Regex::match($this->priceRegex, $this->text);
+        $price = $priceMatch->hasMatch() ? $priceMatch->group(1) : null;
+        return $price;
     }
 }
