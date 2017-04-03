@@ -42,7 +42,7 @@ class Receipt
      */
     public function __construct(Repository $config)
     {
-        $this->foo = array_get($config, 'foo', 'bar');
+        $this->foo = array_get($config['receiptinterpreter'], 'foo');
     }
 
     /**
