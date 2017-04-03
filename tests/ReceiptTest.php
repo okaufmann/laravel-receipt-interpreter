@@ -19,15 +19,21 @@ use Okaufmann\ReceiptInterpreter\Receipt;
  */
 class ReceiptTest extends AbstractTestCase
 {
-    public function testConstruct()
+    /* @test */
+    public function it_can_be_constructed()
     {
         $receipt = new Receipt($this->app['config']);
         $this->assertInstanceOf(Receipt::class, $receipt);
     }
 
-    public function testGetFoo()
+    /* @test */
+    public function config_values_set_correct()
     {
         $dummy = new Receipt($this->app['config']);
         $this->assertSame('bar', $dummy->getFoo());
+    }
+
+    public function testParseReceipt(){
+
     }
 }

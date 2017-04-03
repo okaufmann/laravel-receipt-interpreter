@@ -10,20 +10,33 @@
 
 namespace Okaufmann\Tests\ReceiptInterpreter;
 
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
 use Okaufmann\ReceiptInterpreter\ReceiptInterpreterServiceProvider;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
-abstract class AbstractTestCase extends AbstractPackageTestCase
+abstract class AbstractTestCase extends OrchestraTestCase
 {
-    /**
-     * Get the service provider class.
-     *
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return string
-     */
-    protected function getServiceProviderClass($app)
+    public function setUp()
     {
-        return ReceiptInterpreterServiceProvider::class;
+        parent::setUp();
     }
+
+    /**
+     * @param \Illuminate\Foundation\Application $app
+     *
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [
+            ReceiptInterpreterServiceProvider::class,
+        ];
+    }
+
+    protected function getPackageAliases($app)
+    {
+        return [
+            'Receipt' => 'Okaufmann\ReceiptInterpreter\Facades\Receipt'
+        ];
+    }
+
 }
