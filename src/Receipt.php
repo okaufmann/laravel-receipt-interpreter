@@ -10,7 +10,6 @@
 
 namespace Okaufmann\ReceiptInterpreter;
 
-
 use Spatie\Regex\Regex;
 
 class Receipt
@@ -25,9 +24,10 @@ class Receipt
     }
 
     /**
-     * Create new instance
+     * Create new instance.
      *
      * @param $text
+     *
      * @return Receipt
      */
     public static function create($text)
@@ -41,6 +41,7 @@ class Receipt
     {
         $priceMatch = Regex::match($this->priceRegex, $this->text);
         $price = $priceMatch->hasMatch() ? $priceMatch->group(1) : null;
+
         return $price;
     }
 }

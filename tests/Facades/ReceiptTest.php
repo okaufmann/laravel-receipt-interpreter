@@ -10,7 +10,6 @@
 
 namespace Okaufmann\Tests\ReceiptInterpreter\Facades;
 
-use Okaufmann\ReceiptInterpreter\Facades\Receipt as ReceiptFacade;
 use Okaufmann\ReceiptInterpreter\ReceiptInterpreter;
 use Okaufmann\Tests\ReceiptInterpreter\AbstractTestCase;
 
@@ -24,15 +23,14 @@ class ReceiptTest extends AbstractTestCase
     /** @test */
     public function it_can_be_resolved()
     {
-        $receipt = resolve("receiptinterpreter.receipt");
+        $receipt = resolve('receiptinterpreter.receipt');
         $this->assertInstanceOf(ReceiptInterpreter::class, $receipt);
     }
 
     /** @test */
     public function it_configures_facade_instance()
     {
-        $receipt = resolve("receiptinterpreter.receipt");
+        $receipt = resolve('receiptinterpreter.receipt');
         $this->assertSame('bar', $receipt->getFoo());
     }
-
 }

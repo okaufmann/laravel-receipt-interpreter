@@ -11,7 +11,6 @@
 namespace Okaufmann\Tests\ReceiptInterpreter;
 
 use Okaufmann\ReceiptInterpreter\ReceiptInterpreter;
-use Okaufmann\ReceiptInterpreter\Facades\Receipt as ReceiptFacade;
 use Spatie\Image\Image;
 use Textcleaner\Textcleaner;
 
@@ -27,7 +26,8 @@ class ReceiptInterpreterTest extends AbstractTestCase
      */
     private function getInstance()
     {
-        $receipt = resolve("receiptinterpreter.receipt");
+        $receipt = resolve('receiptinterpreter.receipt');
+
         return $receipt;
     }
 
@@ -70,7 +70,6 @@ class ReceiptInterpreterTest extends AbstractTestCase
 
 //      -g -e stretch -f 25 -o 10 -u -s 1 -T -p 10
         $textclean->execute();
-
 
 //        $receiptPrice = $this->getInstance()
 //            ->fromImage(__DIR__.'/data/receipt-2-deskew.png')
