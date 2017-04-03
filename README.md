@@ -1,5 +1,7 @@
 Receipt interpreter
 =================
+[![StyleCI](https://styleci.io/repos/87106628/shield?branch=master)](https://styleci.io/repos/87106628)
+[![Build Status](https://travis-ci.com/okaufmann/mighty-movies-web-app-2.svg?token=s6gxdmrSFqDQhAz31z4V&branch=master)](https://travis-ci.com/okaufmann/mighty-movies-web-app-2)
 
 ReceiptInterpreter was created by, and is maintained by [Oliver Kaufmann](https://github.com/). Feel free to check out the [change log](CHANGELOG.md), [releases](https://github.com/ptondereau/laravel-packme/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
