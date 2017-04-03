@@ -35,8 +35,7 @@ abstract class AbstractTestCase extends OrchestraTestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Receipt' => 'Okaufmann\ReceiptInterpreter\Facades\Receipt'
+            'Receipt' => 'Okaufmann\ReceiptInterpreter\Facades\Receipt',
         ];
     }
-
 }

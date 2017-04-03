@@ -33,7 +33,7 @@ class ReceiptTest extends AbstractTestCase
         $this->assertSame('bar', $dummy->getFoo());
     }
 
-    public function testParseReceipt(){
-
+    public function testParseReceipt()
+    {
     }
 }
