@@ -2,7 +2,7 @@
 /*
  * This file is part of ReceiptInterpreter.
  *
- * (c) {{ author }}
+ * (c) Oliver Kaufmann
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,7 +16,7 @@ use Okaufmann\ReceiptInterpreter\Receipt;
 /**
  * This is the service provider test class.
  *
- * @author {{ author }}
+ * @author Oliver Kaufmann
  */
 class ServiceProviderTest extends AbstractTestCase
 {

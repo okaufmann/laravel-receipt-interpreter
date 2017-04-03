@@ -2,7 +2,7 @@
 /*
  * This file is part of ReceiptInterpreter.
  *
- * (c) {{ author }}
+ * (c) Oliver Kaufmann
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,14 +15,14 @@ use Okaufmann\ReceiptInterpreter\Receipt;
 /**
  * This is the dummy test class.
  *
- * @author {{ author }}
+ * @author Oliver Kaufmann
  */
 class ReceiptTest extends AbstractTestCase
 {
     public function testConstruct()
     {
-        $dummy = new Receipt($this->app['config']);
-        $this->assertInstanceOf(Receipt::class, $dummy);
+        $receipt = new Receipt($this->app['config']);
+        $this->assertInstanceOf(Receipt::class, $receipt);
     }
 
     public function testGetFoo()

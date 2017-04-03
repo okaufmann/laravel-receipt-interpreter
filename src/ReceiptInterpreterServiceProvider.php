@@ -2,7 +2,7 @@
 /*
  * This file is part of ReceiptInterpreter.
  *
- * (c) {{ author }}
+ * (c) Oliver Kaufmann
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,7 +18,7 @@ use Laravel\Lumen\Application as LumenApplication;
 /**
  * This is the YourPackage service provider class.
  *
- * @author {{ author }}
+ * @author Oliver Kaufmann
  */
 class ReceiptInterpreterServiceProvider extends ServiceProvider
 {

@@ -2,7 +2,7 @@
 /*
  * This file is part of YourPackage.
  *
- * (c) {{ author }}
+ * (c) Oliver Kaufmann
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,7 +15,7 @@ use Illuminate\Contracts\Config\Repository;
 /**
  * This is the Dummy class.
  *
- * @author {{ author }}
+ * @author Oliver Kaufmann
  */
 class Receipt
 {

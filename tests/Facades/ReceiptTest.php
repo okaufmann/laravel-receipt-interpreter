@@ -8,7 +8,7 @@ use Okaufmann\Tests\ReceiptInterpreter\AbstractTestCase;
 /**
  * This is the UpsLocatorTest facade test class.
  *
- * @author {{ author }}
+ * @author Oliver Kaufmann
  */
 class ReceiptTest extends AbstractTestCase
 {

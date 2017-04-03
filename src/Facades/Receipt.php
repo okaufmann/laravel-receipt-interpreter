@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * This is the Dummy facade class.
  *
- * @author {{ author }}
+ * @author Oliver Kaufmann
  */
 class Receipt extends Facade
 {
