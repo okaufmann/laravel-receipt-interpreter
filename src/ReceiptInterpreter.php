@@ -73,7 +73,7 @@ class ReceiptInterpreter
 
         $text = $this->tesseractInstance
             ->lang('deu')
-            ->psm(6 )
+            ->psm(6)
             ->run();
 
         $receipt = Receipt::create($text);
