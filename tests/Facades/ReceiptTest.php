@@ -13,6 +13,7 @@ use Okaufmann\Tests\ReceiptInterpreter\AbstractTestCase;
 class ReceiptTest extends AbstractTestCase
 {
     use FacadeTrait;
+
     /**
      * Get the facade accessor.
      *
@@ -22,6 +23,7 @@ class ReceiptTest extends AbstractTestCase
     {
         return 'receiptinterpreter.receipt';
     }
+
     /**
      * Get the facade class.
      *
@@ -31,6 +33,7 @@ class ReceiptTest extends AbstractTestCase
     {
         return \Okaufmann\ReceiptInterpreter\Facades\Receipt::class;
     }
+
     /**
      * Get the facade root.
      *
